@@ -26,9 +26,18 @@ function printPayment(data: typeof Car): string {
     return output;
 }
 
+function formatPhoneNumber(phone: string | number): string {
+    phone = ('' + phone.toString()).replace(/\D/g, '') // remove non-numbers
+    if (phone.length == 10) {
+        return phone.replace(/(\d{3})(\d{3})(\d{4})/, "($1) $2-$3")
+    }
+    return "(000) 000-0000"
+}
+
 module.exports = {
     print,
     printFirstLast,
     printPurchased,
     printPayment,
+    formatPhoneNumber,
 }
