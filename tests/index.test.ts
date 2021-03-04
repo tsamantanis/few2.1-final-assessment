@@ -13,4 +13,10 @@ describe('test console log', () => {
         expect(output).to.be.a('string')
         expect(output).to.be.equal('Neel Mclarty')
     });
+
+    it('should print the purchased date to a a date and format it as: Month date, Year', () => {
+        let output = Carz.printPurchased(data[0])
+        expect(output).to.be.a('string')
+        expect(output).to.be.equal('April 3, 2018')
+    });
 });

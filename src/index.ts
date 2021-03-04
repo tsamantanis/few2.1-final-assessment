@@ -14,7 +14,14 @@ function printFirstLast(data: typeof Car): string {
     return output;
 }
 
+function printPurchased(data: typeof Car): string {
+    let output:string = new BetterDate(data.purchased).format('M d, Y');
+    console.log(output)
+    return output;
+}
+
 module.exports = {
     print,
     printFirstLast,
+    printPurchased
 }
