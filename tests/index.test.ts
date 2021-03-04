@@ -19,4 +19,10 @@ describe('test console log', () => {
         expect(output).to.be.a('string')
         expect(output).to.be.equal('April 3, 2018')
     });
+
+    it('should print out last payment showing the date as "when"', () => {
+        let output = Carz.printPayment(data[0])
+        expect(output).to.be.a('string')
+        expect(output).to.be.equal('7 months ago')
+    });
 });

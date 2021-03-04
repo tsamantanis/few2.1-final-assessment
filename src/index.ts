@@ -20,8 +20,15 @@ function printPurchased(data: typeof Car): string {
     return output;
 }
 
+function printPayment(data: typeof Car): string {
+    let output:string = new BetterDate(data.lastpayment).when();
+    console.log(output)
+    return output;
+}
+
 module.exports = {
     print,
     printFirstLast,
-    printPurchased
+    printPurchased,
+    printPayment,
 }
