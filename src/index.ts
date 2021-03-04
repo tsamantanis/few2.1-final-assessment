@@ -34,10 +34,17 @@ function formatPhoneNumber(phone: string | number): string {
     return "(000) 000-0000"
 }
 
+function printPhoneNumber(data: typeof Car): string {
+    let output:string = "Phone: " + formatPhoneNumber(data.phone)
+    console.log(output)
+    return output
+}
+
 module.exports = {
     print,
     printFirstLast,
     printPurchased,
     printPayment,
     formatPhoneNumber,
+    printPhoneNumber
 }

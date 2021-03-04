@@ -36,7 +36,7 @@ describe('test console log', () => {
     });
 
     it('should print out a formatted phone number as a string', () => {
-        let output = Carz.formatPhoneNumber(data[0])
+        let output = Carz.printPhoneNumber(data[0])
         expect(output).to.be.a('string')
         expect(output).to.be.equal('Phone: (153) 158-9353')
     });
