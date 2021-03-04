@@ -33,6 +33,12 @@ describe('test console log', () => {
         output = Carz.formatPhoneNumber('4155448375')
         expect(output).to.be.a('string')
         expect(output).to.be.equal('(415) 544-8375')
+        output = Carz.formatPhoneNumber('00sslfme')
+        expect(output).to.be.a('string')
+        expect(output).to.be.equal('(000) 000-0000')
+        output = Carz.formatPhoneNumber('')
+        expect(output).to.be.a('string')
+        expect(output).to.be.equal('(000) 000-0000')
     });
 
     it('should print out a formatted phone number as a string', () => {
