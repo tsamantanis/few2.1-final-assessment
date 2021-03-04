@@ -25,4 +25,20 @@ describe('test console log', () => {
         expect(output).to.be.a('string')
         expect(output).to.be.equal('7 months ago')
     });
+
+    it('should accept a 10 digit number/string and return a formatted phone number as a string', () => {
+        let output = Carz.formatPhoneNumber(4155448375)
+        expect(output).to.be.a('string')
+        expect(output).to.be.equal('(415) 544-8375')
+        output = Carz.formatPhoneNumber('4155448375')
+        expect(output).to.be.a('string')
+        expect(output).to.be.equal('(415) 544-8375')
+    });
+
+    it('should print out a formatted phone number as a string', () => {
+        let output = Carz.formatPhoneNumber(data[0])
+        expect(output).to.be.a('string')
+        expect(output).to.be.equal('Phone: (153) 158-9353')
+    });
+
 });
